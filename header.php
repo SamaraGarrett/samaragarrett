@@ -22,7 +22,7 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">Samara Garrett</a>
     </div>
     <ul class="nav navbar-nav">
       <li <?php if(strcmp(PAGE_TITLE, "Index") == 0) { echo 'class="active"'; } ?>><a href="index.php">Home</a></li>
