@@ -1,0 +1,30 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    --color-scheme-dark: rgb(88, 146, 146);
+    --color-scheme-light: white;
+    --color-scheme-mid: rgb(202, 231, 240);
+    --color-dark: black;
+}
+
+/* nav bar */
+.navbar.navbar-default {
+    background-color: var(--color-scheme-dark);
+    border: 0px;
+}
+
+/* nav bar link text */
+.navbar-default .navbar-nav > li > a {
+    color: var(--color-scheme-light);
+}
+
+/* highlight current active tab */
+.navbar-default .navbar-nav > li.active > a {
+    background-color: var(--color-scheme-light);
+    color: var(--color-scheme-dark);
+}
+
+/* highlight tab when hovered over */
+.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover {
+    background-color: var(--color-scheme-mid);
+    color: var(--color-scheme-dark);
+}
