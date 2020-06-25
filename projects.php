@@ -33,7 +33,7 @@ session_start();
         $_SESSION['filename'] = 'Team_2_Project_Report.pdf';
     ?>
     <p>See the project documentation pdf: <a href="pdf.php">Tool Rental System Documentation</a></p>
-    <p>A demo on this project can be shown on my local machine through Zoom screenshare on request.</p>
+    <p>A demo of this project can be shown on my local machine through Zoom screenshare upon request.</p>
 </div>
 
 <div class="container">
@@ -45,7 +45,7 @@ session_start();
         <li>Discovered and fixed a bug that had caused important records to be deleted.</li>
         <li>Other bug fixes:
             <ul>
-                <li>Corrected display of registered classes and balance due.</li>
+                <li>Corrected display of registered classes and registration costs.</li>
                 <li>Adjustments to display of data so that it fit logic requirements given by supervisor.</li> 
                 <li>Fixed confirmation email behavior for registration.</li>
             </ul>

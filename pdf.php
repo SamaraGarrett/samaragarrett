@@ -8,6 +8,9 @@ session_start();
 $file = $_SESSION['file']; 
 $filename = $_SESSION['filename']; 
 
+// pdf view doesn't work on chrome without this line
+ob_clean();
+
 // Header content type 
 header('Content-type: application/pdf'); 
 

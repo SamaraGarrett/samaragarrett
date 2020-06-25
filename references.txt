@@ -2,3 +2,4 @@ PHP and MySQL Web Development: Fifth Edition
 by Luke Welling and Laura Thompson
 
 https://www.w3schools.com/
+https://stackoverflow.com/questions/34737498/failed-to-load-pdf-document-in-chrome-browser
