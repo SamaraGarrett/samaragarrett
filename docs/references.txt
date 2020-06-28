@@ -1,0 +1,17 @@
+PHP and MySQL Web Development: Fifth Edition
+by Luke Welling and Laura Thompson
+
+https://www.w3schools.com/
+https://stackoverflow.com/questions/34737498/failed-to-load-pdf-document-in-chrome-browser
+
+Web Application Structure:
+https://www.nikolaposa.in.rs/blog/2017/01/16/on-structuring-php-projects/
+https://github.com/php-pds/skeleton/tree/1.0.0
+https://stackoverflow.com/questions/19648760/project-structure-for-php
+
+Database:
+https://www.a2hosting.com/kb/developer-corner/mysql/connect-to-mysql-using-php
+https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php
+
+PHP comments:
+https://www.phpdoc.org/

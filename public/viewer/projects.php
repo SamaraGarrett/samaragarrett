@@ -1,6 +1,6 @@
 <?php
 DEFINE('PAGE_TITLE','Projects');
-require('header.php');
+require('../header.php');
 
 session_start();
 ?>
@@ -65,5 +65,5 @@ session_start();
 <br>
 
 <?php
-require('footer.php');
+require('../footer.php');
 ?>

@@ -1,6 +1,6 @@
 <?php 
 DEFINE('PAGE_TITLE','PDF');
-require('header.php');
+require('../header.php');
 
 session_start();
   
@@ -23,6 +23,6 @@ header('Accept-Ranges: bytes');
 // Read the file 
 @readfile($file); 
 
-require('footer.php');
+require('../footer.php');
 ?> 
   

@@ -1,6 +1,6 @@
 <?php
 DEFINE('PAGE_TITLE','Login');
-require('header.php');
+require('../header.php');
 ?>
 
 <div class="container">
@@ -8,5 +8,5 @@ require('header.php');
 </div>
 
 <?php
-require('footer.php');
+require('../footer.php');
 ?>
