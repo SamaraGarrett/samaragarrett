@@ -1,15 +1,14 @@
 <?php
 DEFINE('PAGE_TITLE','Projects');
 require('../header.php');
-
-session_start();
 ?>
 
 <div class="container">
     <h1>This Website</h1>
-    <p>PHP <!-- and MySQL three-tier (in development)-->web application.</p>
+    <p>PHP and MySQL three-tier web application.</p>
     <ul>
-        <li>Designed and implemented web application.</li>
+        <li>Designed and implemented web application, including structure, style, and database.</li>
+        <li></li>
     </ul>
     <p>Link to github for project: <a href="https://github.com/SamaraGarrett/samaragarrett">Samara Garrett</a>.</p>
 </div>

@@ -28,3 +28,15 @@ body {
     background-color: var(--color-scheme-mid);
     color: var(--color-scheme-dark);
 }
+
+/* change color of form submit button */
+.btn.btn-primary {
+    background-color: var(--color-scheme-dark);
+    border-color: var(--color-scheme-dark);
+}
+
+/* invert colors of form submit button on hover */
+.btn.btn-primary:hover {
+    background-color: var(--color-scheme-light);
+    color: var(--color-scheme-dark);
+}
