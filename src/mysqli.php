@@ -35,14 +35,14 @@ function connectToDB() {
  * a SELECT statement this should be true, otherwise false.
  * @param $statement The statement to prepare to query the database. Should have question
  * marks in the respective locations that the input parameters go.
- * @param $types The types of the parameters in order, so an int parameterfollowed by a 
+ * @param $types The types of the parameters in order, so an int parameter followed by a 
  * string parameter would be 'is'.
  * @param $params The parameters to be run on the statement in the locations of the 
  * respective question marks.
  * 
  * @return The return value for the statement if it is a SELECT statement.
  */
-function preparedStatementDB(string $returnAmount, string $statement, string $types, string ...$params) {
+function preparedStatementDB(string $returnAmount, string $statement, string $types, ...$params) {
     // connect to database
     $mysqli = connectToDB();
 
@@ -72,7 +72,7 @@ function preparedStatementDB(string $returnAmount, string $statement, string $ty
         // bind the result
         $result = NULL;
         if (!$stmt->bind_result($result)) {
-        echo "Binding output parameters failed: (" . $stmt->errno . ") " . $stmt->error;
+            echo "Binding output parameters failed: (" . $stmt->errno . ") " . $stmt->error;
         }
 
         // fetch the result
@@ -103,6 +103,7 @@ function preparedStatementDB(string $returnAmount, string $statement, string $ty
 
         return $row;
     } else if ($returnAmount == 'multi') {
+        // fetch all results into an associative array
         $result = $stmt->get_result();
         $results = $result->fetch_all(MYSQLI_ASSOC);
 
@@ -124,11 +125,47 @@ function preparedStatementDB(string $returnAmount, string $statement, string $ty
  * WARNING: For security, only use this if no user input is included in query! If user input 
  * is included use preparedStatementDB function instead.
  */
-function queryDB($statement) {
+function queryDB(string $returnAmount, string $statement) {
     // connect to database
     $mysqli = connectToDB();
 
+    if (!($result = $mysqli->query($statement))) {
+        echo "Query failed: (" . $mysqli->errno . ") " . $mysqli->error;
+    }
 
+    if ($returnAmount == 'none') {
+        $result->close();
+
+        $mysqli->close();
+    } else if ($returnAmount == 'one') {
+        // TODO
+
+    } else if ($returnAmount == 'oneRow') {
+        // fetch the result
+        $row = $result->fetch_assoc();
+
+        // free the results
+        $result->free_result();
+
+        // close the statement
+        $result->close();
+
+        //close the mysqli instance
+        $mysqli->close();
+
+        return $row;
+    } else if ($returnAmount == 'multi') {
+        // fetch all into associative array
+        $results = $result->fetch_all(MYSQLI_ASSOC);
+
+        // free the results
+        $result->free_result();
+
+        // close the mysqli instance
+        $mysqli->close();
+
+        return $results;
+    }
 }
   
 ?>

@@ -1,6 +1,6 @@
 <?php 
 DEFINE('PAGE_TITLE','Log Out');
-require('header.php');
+require('../header.php');
 ?>
 
 <?php
@@ -11,9 +11,9 @@ require('header.php');
     session_destroy();
 
     // return to main page
-    header('Location: ' . PATH . 'index.php');
+    redirect(PATH . 'index.php');
 ?>
 
 <?php
-require('footer.php');
+require('../footer.php');
 ?>

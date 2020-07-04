@@ -41,7 +41,9 @@ if (isset($_GET['action']) && ($_GET['action'] == 'submit')) {
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['user_type'] = $user['user_type'];
             session_write_close();
-            header('Location: ' . PATH . 'index.php');
+
+            // return to main page
+            redirect(PATH . 'index.php');
         } else {
             echo 'wrong';
         }

@@ -14,4 +14,13 @@ function isActive(string $pageTitle, string $currentPage) {
   }
 }
 
+/**
+ * A function which redirects to a given page.
+ * 
+ * @param $location The path or url to redirect to
+ */
+function redirect(string $location) {
+  header('Location: ' . $location);
+  exit;
+}
 ?>

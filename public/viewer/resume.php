@@ -1,6 +1,22 @@
 <?php 
-DEFINE('PAGE_TITLE','Resume');
+DEFINE('PAGE_TITLE','PDF');
 require('../header.php');
+
+if (isset($_GET['title'])) {
+    if ($_GET['title'] == 'resume') {
+
+        DEFINE('PAGE_TITLE','Resume');
+    } else if ($_GET['title'] == 'trs') {
+
+        DEFINE('PAGE_TITLE','PDF');
+    } else {
+        // no valid pdf selected
+        redirect(PATH . 'index.php');
+    }
+} else {
+    // no pdf selected
+    redirect(PATH . 'index.php');
+}
 ?>
 
 <!-- 

@@ -8,7 +8,7 @@ require('../header.php');
     <p>PHP and MySQL three-tier web application.</p>
     <ul>
         <li>Designed and implemented web application, including structure, style, and database.</li>
-        <li></li>
+        <li>Implemented role based access control.</li>
     </ul>
     <p>Link to github for project: <a href="https://github.com/SamaraGarrett/samaragarrett">Samara Garrett</a>.</p>
 </div>
@@ -26,12 +26,7 @@ require('../header.php');
         <li>Implemented several use cases, including Rent Out Tool, Return Tool, and display and search of tables (using jQuery DataTables).</li>
     </ul>
     <p>Link to github for project: <a href="https://github.com/lancefox1979/ToolRentalSystem.Web">Tool Registration System</a>. My commits are under the GitHub account SamaraEGarrett.</p>
-    <?php
-        // set the file location and name for the project documentation
-        $_SESSION['file'] = 'resources/Team_2_Project_Report.pdf'; 
-        $_SESSION['filename'] = 'Team_2_Project_Report.pdf';
-    ?>
-    <p>See the project documentation pdf: <a href="pdf.php">Tool Rental System Documentation</a></p>
+    <p>See the project documentation pdf: <a href="pdf.php?title=trs">Tool Rental System Documentation</a></p>
     <p>A demo of this project can be shown on my local machine through Zoom screenshare upon request.</p>
 </div>
 
@@ -60,8 +55,6 @@ require('../header.php');
         </li>
     </ul>
 </div>
-<br>
-<br>
 
 <?php
 require('../footer.php');
