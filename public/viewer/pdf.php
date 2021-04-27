@@ -4,8 +4,8 @@ require('../header.php');
 
 if (isset($_GET['title'])) {
     if ($_GET['title'] == 'resume') {
-        $file = PATH . '../resources/ResumeSamaraGarrett.pdf'; 
-        $filename = 'ResumeSamaraGarrett.pdf';
+        $file = PATH . '../resources/ResumeSamaraGarrettOnline.pdf'; 
+        $filename = 'ResumeSamaraGarrettOnline.pdf';
 
         DEFINE('PAGE_TITLE','Resume');
     } else if ($_GET['title'] == 'trs') {
